@@ -1,0 +1,43 @@
+{"datas" : [
+    {
+        "group": "A",
+        "team": "Brazil",
+        "points": "7 points"
+    },
+    {
+        "group": "B",
+        "team": "Netherlands",
+        "points": "9 points"
+    },
+    {
+        "group": "C",
+        "team": "Colombia",
+        "points": "9 points"
+    },
+    {
+        "group": "D",
+        "team": "Costa Rica",
+        "points": "7 points"
+    },
+    {
+        "group": "E",
+        "team": "France",
+        "points": "6 points"
+    },
+    {
+        "group": "F",
+        "team": "Argentina",
+        "points": "6 points"
+    },
+    {
+        "group": "G",
+        "team": "Germany",
+        "points": "4 points"
+    },
+    {
+        "group": "H",
+        "team": "Belgium",
+        "points": "6 points"
+    } 
+   		 ]
+}

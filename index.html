@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Javascript Ajax</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+		<header><h1 id="head">2014 World Cup Top Teams</h1></header>
+
+		<div id="list">
+			<a href="#" id="prev_btn">&laquo</a>
+			<a href="#" id="next_btn">&raquo</a>
+			<div id="teams">
+			</div>
+		</div>
+		<br/><br/>
+		
+		<script id="scripttmp" type="text/template">
+			{{#datas}}
+				<div class="datas">
+					<img src="images/{{team}}.jpg">
+					<h3>Group {{group}}</h3>
+					<h4>{{team}}</h4>
+					<p>{{points}}</p>
+				</div>	
+			{{/datas}}
+		</script>
+		
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>	
+		<script  type="text/javascript">
+			$(function(){
+				$.getJSON('data.json',function(data){
+					var template = $('#scripttmp').html();
+					var html = Mustache.to_html(template,data);
+					$('#teams').html(html);
+					
+					$('#teams').cycle({
+						fx: 'fade',
+						pause: 1,
+						next: '#next_btn',
+						prev: '#prev_btn',
+						speed: 500,
+						timeout: 10000
+					}); // cycle
+				}); // getJSON
+			}); //function
+		</script>
+	</body>
+</html>
