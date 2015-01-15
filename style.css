@@ -1,4 +1,9 @@
 /* style.css */
+
+body{
+	background:#0F5D37;
+}
+
 header{
 	background-color: #FFFF00;
 	width: 50%;
